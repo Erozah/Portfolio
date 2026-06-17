@@ -4,7 +4,7 @@ footer { background-color: #D17A22; }
 nav { background-color: #D17A22; }
 
 /* Sélecteur de balise */
-p { color: #A7C957; }
+p { color: #A7C957; ;}
 H1 { color: red; }
 H2 { color: brown; }
 ul { color : red}
@@ -15,10 +15,11 @@ div {color : rgb(163, 243, 43)}
 
 
 /* Sélecteur de classe */
-.intro { font-size: 1.2em; }
+.intro { font-size: 1.2em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif }
+.bold { font-weight: 900;}
 
 /* Sélecteur d'identifiant */
-#photo-profil { border-radius: 70%; height: 300px; width: 300px;}
+#photo-profil { border-radius: 70%; height: 300px; width: 300px; display: block; margin: 0 auto; max-width: 100%;}
 
 /* Sélecteur descendant */
 nav ul { list-style: none; }
