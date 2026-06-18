@@ -8,7 +8,7 @@
 	<meta http-equiv="refresh" content="30">
 	<title>Me contacter</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/styles/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -52,7 +52,15 @@
 			<a href="mailto:mail@gmail.com">mail@gmail.com</a>
 		</section>
 		<section>
-			
+			<form action="https://httpbin.org/post" method="POST">
+				<label for="nom">Votre nom :</label>
+				<input type="text" id="nom" name="nom" required>
+				<label for="email">Votre email :</label>
+				<input type="email" id="email" name="email" required>
+				<label for="message">Votre message :</label>
+				<textarea id="message" name="message" rows="5" required></textarea>
+				<button type="submit">Envoyer</button>
+			</form>
 		</section>
 	</header>
 	<footer>
