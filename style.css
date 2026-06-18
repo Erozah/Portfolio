@@ -1,26 +1,104 @@
+/* Limites */
+* { box-sizing: border-box; }
+
 /* Couleur du fond */
-body { background-color: #3F292B; }
-footer { background-color: #D17A22; }
-nav { background-color: #D17A22; }
+body { background-color: #ACC8E5; }
+footer { background-color: #CBE2FE; }
+nav { background-color: #CBE2FE; }
 
 /* Sélecteur de balise */
-p { color: #A7C957; ;}
-H1 { color: red; }
-H2 { color: brown; }
-ul { color : red}
-ol { color : greenyellow}
-table {color : greenyellow}
-a { color : lightblue}
-div {color : rgb(163, 243, 43)}
+body {
+	font-family: 'Inter', sans-serif;
+}
+h2, h3 {
+	font-family: 'Playfair Display', serif;
+}
+p {
+	color: #112A46;
+}
+h1, h2 {
+	color: darkblue;
+}
+ul {
+	color : #112A46;
+}
+ol {
+	color : #112A46;
+}
+table {
+	color : #112A46;
+}
+a {
+	color : #112A46; 
+	font-weight: bold;
+}
+div {
+	color : rgb(15, 26, 63);
+}
+section {
+	background-color: #f0f0f0;
+	padding: 20px;
+	margin:10px;
+	border: 2px solid #333;
+	border-radius: 8px;
+}
+header {
+	display: flex;
+	flex-direction: column;
+}
 
 
 /* Sélecteur de classe */
-.intro { font-size: 1.2em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif }
-.bold { font-weight: 900;}
+.intro {
+	font-size: 1.2em;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bold {
+	font-weight: 900;
+}
+.arimo-title {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 /* Sélecteur d'identifiant */
-#photo-profil { border-radius: 70%; height: 300px; width: 300px; display: block; margin: 0 auto; max-width: 100%;}
+#photo-profil {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
+	max-width: 100%;
+	object-fit: cover;
+	padding: 20px;
+}
+#en-tete {
+
+	display:flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+#presentation {
+	align-items: center;
+}
 
 /* Sélecteur descendant */
-nav ul { list-style: none; }
-main ul { list-style: upper-roman; }
+nav ul {
+	display: flex;
+	gap: 20px;
+	padding: 0;
+	align-self: center;
+	justify-content: space-evenly;
+}
+nav ul li {
+	list-style: none;
+	background-color: #f0f0f0;
+	padding: 20px;
+	margin: 10px;
+	border: 3px solid #333;
+	border-radius: 30px;
+}
+main ul {
+	list-style: upper-roman;
+}

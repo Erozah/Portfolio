@@ -25,19 +25,19 @@ CSS === Habillage / style -> mise en page
 ### HTML -> structure
 
  ```html
-  <html>
-    <head>
-        -> Invisible pour l'utilisateur
-        -> Paramétrer
-        -> Référencer
-        -> Importer
-    </head>
-    <body>
-        -> Visible pour l'utilisateur
-        -> Tous les éléments visibles sont ici
-        -> DOM
-    </body>
-  </html>
+	<html>
+	<head>
+		-> Invisible pour l'utilisateur
+		-> Paramétrer
+		-> Référencer
+		-> Importer
+	</head>
+	<body>
+		-> Visible pour l'utilisateur
+		-> Tous les éléments visibles sont ici
+		-> DOM
+	</body>
+	</html>
   ```
 
   ## Focus -> CSS
