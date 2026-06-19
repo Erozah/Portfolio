@@ -75,9 +75,9 @@ form {
 	gap: 15px;
 	max-width: 500px;
 }
-
-label { font-weight: bold; }
-
+label { 
+	font-weight: bold; 
+}
 input, textarea {
 	padding: 10px;
 	border: 1px solid #ccc;
@@ -85,12 +85,10 @@ input, textarea {
 	font-family: inherit;
 	font-size: 1em;
 }
-
 input:focus, textarea:focus {
 	border-color: #2c3e50;
 	outline: none;
 }
-
 button {
 	padding: 12px 24px;
 	background-color: #2c3e50;
@@ -100,9 +98,14 @@ button {
 	cursor: pointer;
 	font-size: 1em;
 }
-
-button:hover { background-color: #34495e; }
-
+button:hover { 
+	background-color: #34495e; 
+}
+nav {
+	height: 5vh;
+	width: 100vw;
+	position: fixed;
+}
 
 /* Sélecteur de classe */
 .intro {
@@ -169,6 +172,13 @@ button:hover { background-color: #34495e; }
 }
 .skills .python::after {
 	width: 65%;
+}
+.hierarchie {
+	display: flex;
+	justify-content: space-evenly;
+}
+.top_of_page {
+	padding-top: 5vh;
 }
 
 /* Sélecteur d'identifiant */
