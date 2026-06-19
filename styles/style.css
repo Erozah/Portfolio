@@ -99,10 +99,11 @@ button:hover {
 }
 nav {
 	height: 5vh;
-	width: 100vw;
 	position: fixed;
-	max-width: 100%;
 	z-index: 1;
+	padding: 20px;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* Sélecteur de classe */
@@ -120,7 +121,7 @@ nav {
   font-style: normal;
 }
 .top_of_page {
-	padding-top: 13vh;
+	padding-top: 35px;
 }
 .video {
 	display: block;
@@ -205,9 +206,11 @@ nav ul {
 	display: flex;
 	gap: 20px;
 	padding: 20px;
+	margin-block-start: 0;
+	margin-block-end: 0;
 	align-self: center;
 	justify-content:space-evenly;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 }
 nav ul li  {
 	list-style: none;
@@ -215,8 +218,7 @@ nav ul li  {
 nav ul li a {
 	list-style: none;
 	background-color: #f0f0f0;
-	padding: 20px;
-	margin: 10px;
+	padding: 5px;
 	border: 3px solid #333;
 	border-radius: 30px;
 	text-decoration: none;
@@ -225,8 +227,14 @@ nav ul li a {
 @media (min-width: 768px) {
 	nav ul {
 		flex-direction: row;
+		justify-content: center;
+		width: 100%;
 		gap: 20px;
-		flex-wrap: nowrap;
+		padding: 40px;
+	}
+	nav ul li a {
+	padding: 20px;
+	margin: 10px;
 	}
 	.hierarchie {
 	margin: 10;
@@ -234,17 +242,17 @@ nav ul li a {
 	justify-content: space-between;
 	word-wrap: wrap;
 	}
-	.top_of_page {
-		padding-top: 5vh;
-	}
 	#en-tete {
 		flex-direction: row-reverse;
+	}
+	.top_of_page {
+		padding-top: 55px;
 	}
 }
 /* landscape */
 @media (orientation: landscape) {
 	.top_of_page {
-		padding-top: 15vh;
+		padding-top: 55px;
 	}
 	.hierarchie {
 		margin: 10;
@@ -252,8 +260,20 @@ nav ul li a {
 		justify-content: space-between;
 		word-wrap: wrap;
 	}
+	nav ul {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		gap: 20px;
+		padding: 30px;
+	}
+	nav ul li a {
+	padding: 20px;
+	margin: 10px;
+	}
 }
 /* À partir de 992px de large = desktop */
 @media (min-width: 992px) {
+	
 
 }
