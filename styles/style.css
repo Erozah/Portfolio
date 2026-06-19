@@ -3,7 +3,6 @@
 /* Limites */
 * { 
 	box-sizing: border-box; 
-	word-wrap: wrap;
 }
 
 /* Couleur du fond */
@@ -237,10 +236,8 @@ nav ul li a {
 	margin: 10px;
 	}
 	.hierarchie {
-	margin: 10;
 	display: flex;
 	justify-content: space-between;
-	word-wrap: wrap;
 	}
 	#en-tete {
 		flex-direction: row-reverse;
@@ -255,10 +252,8 @@ nav ul li a {
 		padding-top: 55px;
 	}
 	.hierarchie {
-		margin: 10;
 		display: flex;
 		justify-content: space-between;
-		word-wrap: wrap;
 	}
 	nav ul {
 		flex-direction: row;
