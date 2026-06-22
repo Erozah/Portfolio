@@ -1,4 +1,6 @@
 :root {
-	--layout-backgroud-color: #CBE2FE;;
-	--text-color: #112A46 ;
+	--layout-background-color: #ffffffcc;
+	--text-color: #112A46;
+	--accent-color: #1e40af;
+	--surface-color: #f8fbff;
 }
