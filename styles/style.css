@@ -39,7 +39,7 @@ section {
 	margin: 12px;
 	border: 1px solid #d1e5ff;
 	border-radius: 14px;
-	box-shadow: 0 8px 24px #112a4614;
+	box-shadow: 0 8px 24px rgba(17, 42, 70, 0.08);
 }
 header {
 	display: flex;
@@ -110,12 +110,10 @@ nav {
 	font-size: 1.2em;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.bold,
-.Bold {
+.bold {
 	font-weight: 900;
 }
-.arimo-title,
-.Arimo-title {
+.arimo-title {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
