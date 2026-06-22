@@ -228,7 +228,7 @@ nav ul li a {
 .back-to-top {
 	position: fixed;
 	right: 20px;
-	bottom: 20px;
+	bottom: 36px;
 	width: 48px;
 	height: 48px;
 	display: flex;
@@ -244,6 +244,10 @@ nav ul li a {
 }
 .back-to-top:hover {
 	background-color: #34495e;
+}
+.back-to-top:focus-visible {
+	outline: 3px solid #112A46;
+	outline-offset: 3px;
 }
 /* À partir de 768px de large = tablette */
 @media (min-width: 768px) {
