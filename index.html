@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erozah · Développeur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Erozah<span>.</span></a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#projets">Projets</a>
+                <a href="#competences">Compétences</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="github-link" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-pill">Développeur Logiciel & Web</div>
+                <h1>Conception d'applications <span>Java</span> et d'interfaces web.</h1>
+                <p class="hero-text">
+                    Passionné par le développement d'applications logicielles, la programmation orientée objet en Java et l'intégration web en JavaScript. Je cherche à concevoir des architectures simples, fiables et faciles à maintenir.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projets">
+            <div class="container">
+                <div class="section-top">
+                    <h2>Projets</h2>
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="java">Java</button>
+                        <button class="filter-btn" data-filter="web">Web</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card featured" data-category="web">
+                        <div class="card-tags">
+                            <span>JavaScript</span>
+                            <span>Web Audio API</span>
+                            <span>Python</span>
+                            <span>Linux</span>
+                        </div>
+                        <h3>Wifi Signal Tracker</h3>
+                        <p>
+                            Application en temps réel pour analyser la puissance du signal Wi-Fi dans différentes pièces. Comprend une jauge visuelle dynamique, un retour audio façon compteur Geiger via l'API Web Audio et une interface adaptée mobile.
+                        </p>
+                        <div class="card-link">
+                            <a href="https://github.com/Erozah/Wifi_signal_tracker" target="_blank" rel="noreferrer">Code source →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="java">
+                        <div class="card-tags">
+                            <span>Java</span>
+                            <span>POO</span>
+                            <span>CLI</span>
+                        </div>
+                        <h3>Jeu de plateau Donjons & Dragons</h3>
+                        <p>
+                            Moteur de jeu tour par tour en Java. Application des concepts de la programmation orientée objet : polymorphisme pour les héros et les monstres, gestion des armes, des sorts et d'un inventaire dynamique.
+                        </p>
+                        <div class="card-link">
+                            <a href="https://github.com/Erozah/D-D" target="_blank" rel="noreferrer">Code source →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="java">
+                        <div class="card-tags">
+                            <span>Spring Boot</span>
+                            <span>REST API</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <h3>Kestachet · API REST & Moteur de Budget</h3>
+                        <p>
+                            API de listes de courses partagées conçue en Architecture Hexagonale. Intègre un moteur de calcul de budget en temps réel avec jauges de seuil, une synchronisation par lots (Offline-First) idempotente et un enrichissement via Open Food Facts.
+                        </p>
+                        <div class="card-link">
+                            <a href="https://github.com/Erozah/kestachet" target="_blank" rel="noreferrer">Code source →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="web">
+                        <div class="card-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3>Portfolio personnel</h3>
+                        <p>
+                            Site personnel développé en HTML5, CSS moderne (Grid/Flexbox) et JavaScript vanilla, sans dépendance externe ni framework lourd.
+                        </p>
+                        <div class="card-link">
+                            <a href="https://github.com/Erozah/Portfolio" target="_blank" rel="noreferrer">Code source →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="competences">
+            <div class="container">
+                <h2>Compétences</h2>
+                <div class="skills-grid">
+                    <div class="skill-block">
+                        <h3>Back-end</h3>
+                        <div class="skill-list">
+                            <span>Java (17/21)</span>
+                            <span>Spring Boot</span>
+                            <span>Spring Data JPA</span>
+                            <span>API REST</span>
+                            <span>JUnit 5</span>
+                            <span>Maven</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h3>Front-end</h3>
+                        <div class="skill-list">
+                            <span>JavaScript (ES6+)</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Web Audio API</span>
+                            <span>Responsive UI</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h3>Données & Systèmes</h3>
+                        <div class="skill-list">
+                            <span>SQL / MySQL</span>
+                            <span>PostgreSQL</span>
+                            <span>Git / GitHub</span>
+                            <span>Linux (Debian / Ubuntu)</span>
+                            <span>Bash</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-block">
+                        <h3>Conception</h3>
+                        <div class="skill-list">
+                            <span>POO & SOLID</span>
+                            <span>Design Patterns</span>
+                            <span>Sécurité logicielle</span>
+                            <span>Tests unitaires</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-card">
+                    <h2>Contact</h2>
+                    <p>Pour échanger sur un projet ou une opportunité, vous pouvez me joindre sur mes réseaux :</p>
+                    <div class="contact-links">
+                        <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="btn btn-primary">GitHub (@Erozah)</a>
+                        <a href="https://linkedin.com/in/mickael-plantard-4b2a19a2/" target="_blank" rel="noreferrer" class="btn btn-outline">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>© 2026 Erozah</p>
+            <div class="footer-links">
+                <a href="#projets">Projets</a>
+                <a href="#competences">Compétences</a>
+                <a href="#contact">Contact</a>
+                <a href="https://github.com/Erozah" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
