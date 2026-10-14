@@ -14,6 +14,7 @@ Built with modern web standards: semantic HTML5, modern CSS (CSS Grid, Flexbox, 
 - **WiFi Signal Tracker**: Live WiFi signal meter and radiofrequency Geiger counter tool (Python, Web Audio API, Canvas).
 - **Dungeons & Dragons**: Turn-based RPG and board game engine written in Java (OOP, polymorphism, JUnit 5).
 - **Square Games Platform**: REST API and web UI for turn-based board games featuring modular plugin design, JPA/JDBC persistence, and JWT RSA security.
+- **CartSync**: Collaborative grocery lists API and real-time budget calculation engine (Hexagonal Architecture, Offline-First, Spring Boot).
 - **Users Microservice**: Spring Boot service handling user identity management and verification.
 
 ---
