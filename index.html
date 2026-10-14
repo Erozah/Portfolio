@@ -15,12 +15,17 @@
             <a href="#" class="logo">Erozah<span>.</span></a>
             
             <nav class="nav-links" id="navLinks">
-                <a href="#projets">Projets</a>
-                <a href="#competences">Compétences</a>
-                <a href="#contact">Contact</a>
+                <a href="#projets" data-i18n="nav.projects">Projets</a>
+                <a href="#competences" data-i18n="nav.skills">Compétences</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
 
             <div class="nav-right">
+                <div class="lang-switch" role="group" aria-label="Langue / Language">
+                    <button type="button" class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+                    <span class="lang-divider">/</span>
+                    <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                </div>
                 <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="github-link" aria-label="GitHub">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
@@ -34,14 +39,14 @@
     <main>
         <section class="hero">
             <div class="container">
-                <div class="hero-pill">Développeur Logiciel & Web</div>
-                <h1>Conception d'applications <span>Java</span> et d'interfaces web.</h1>
-                <p class="hero-text">
+                <div class="hero-pill" data-i18n="hero.pill">Développeur Logiciel & Web</div>
+                <h1 data-i18n="hero.title">Conception d'applications <span>Java</span> et d'interfaces web.</h1>
+                <p class="hero-text" data-i18n="hero.text">
                     Passionné par le développement d'applications logicielles, la programmation orientée objet en Java et l'intégration web en JavaScript. Je cherche à concevoir des architectures simples, fiables et faciles à maintenir.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                    <a href="#projets" class="btn btn-primary" data-i18n="hero.btnProjects">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Me contacter</a>
                 </div>
             </div>
         </section>
@@ -49,11 +54,11 @@
         <section class="section" id="projets">
             <div class="container">
                 <div class="section-top">
-                    <h2>Projets</h2>
+                    <h2 data-i18n="projects.title">Projets</h2>
                     <div class="filters">
-                        <button class="filter-btn active" data-filter="all">Tous</button>
-                        <button class="filter-btn" data-filter="java">Java</button>
-                        <button class="filter-btn" data-filter="web">Web</button>
+                        <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">Tous</button>
+                        <button class="filter-btn" data-filter="java" data-i18n="projects.filterJava">Java</button>
+                        <button class="filter-btn" data-filter="web" data-i18n="projects.filterWeb">Web</button>
                     </div>
                 </div>
 
@@ -66,11 +71,11 @@
                             <span>Spicetify</span>
                         </div>
                         <h3>Spicetify Visualizer Engine</h3>
-                        <p>
+                        <p data-i18n="projects.spicetifyDesc">
                             Moteur de visualisation audio 60 FPS pour Spotify (via Spicetify). Conception architecturée selon les principes SOLID pour supporter des "Mod Packs" dynamiques (Cyber Cat, Cosmic Cat, Red Panda). Intègre une analyse fréquentielle en temps réel (FFT), un moteur de physique cinématique de Verlet et des environnements procéduraux réactifs.
                         </p>
                         <div class="card-link">
-                            <a href="https://github.com/Erozah/spicetify-visualizer" target="_blank" rel="noreferrer">Code source →</a>
+                            <a href="https://github.com/Erozah/spicetify-visualizer" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
                         </div>
                     </div>
 
@@ -82,11 +87,11 @@
                             <span>Linux</span>
                         </div>
                         <h3>Wifi Signal Tracker</h3>
-                        <p>
+                        <p data-i18n="projects.wifiDesc">
                             Application en temps réel pour analyser la puissance du signal Wi-Fi dans différentes pièces. Comprend une jauge visuelle dynamique, un retour audio façon compteur Geiger via l'API Web Audio et une interface adaptée mobile.
                         </p>
                         <div class="card-link">
-                            <a href="https://github.com/Erozah/Wifi_signal_tracker" target="_blank" rel="noreferrer">Code source →</a>
+                            <a href="https://github.com/Erozah/Wifi_signal_tracker" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
                         </div>
                     </div>
 
@@ -96,12 +101,12 @@
                             <span>POO</span>
                             <span>CLI</span>
                         </div>
-                        <h3>Jeu de plateau Donjons & Dragons</h3>
-                        <p>
+                        <h3 data-i18n="projects.ddTitle">Jeu de plateau Donjons & Dragons</h3>
+                        <p data-i18n="projects.ddDesc">
                             Moteur de jeu tour par tour en Java. Application des concepts de la programmation orientée objet : polymorphisme pour les héros et les monstres, gestion des armes, des sorts et d'un inventaire dynamique.
                         </p>
                         <div class="card-link">
-                            <a href="https://github.com/Erozah/D-D" target="_blank" rel="noreferrer">Code source →</a>
+                            <a href="https://github.com/Erozah/D-D" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
                         </div>
                     </div>
 
@@ -112,12 +117,12 @@
                             <span>JPA / JDBC</span>
                             <span>JWT</span>
                         </div>
-                        <h3>Square Games - Plateforme de Jeux</h3>
-                        <p>
+                        <h3 data-i18n="projects.squareGamesTitle">Square Games - Plateforme de Jeux</h3>
+                        <p data-i18n="projects.squareGamesDesc">
                             Moteur extensible de jeux de plateau au tour par tour (Morpion, Puissance 4, Taquin). Architecture modulaire par plugins, double couche de persistance (JPA et Spring JDBC), sécurisation des flux par jetons JWT (RSA) et interface web interactive.
                         </p>
                         <div class="card-link">
-                            <a href="https://github.com/Erozah/square_games" target="_blank" rel="noreferrer">Code source →</a>
+                            <a href="https://github.com/Erozah/square_games" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
                         </div>
                     </div>
 
@@ -127,12 +132,12 @@
                             <span>REST API</span>
                             <span>PostgreSQL</span>
                         </div>
-                        <h3>Kestachet - API REST & Moteur de Budget</h3>
-                        <p>
+                        <h3 data-i18n="projects.kestachetTitle">Kestachet - API REST & Moteur de Budget</h3>
+                        <p data-i18n="projects.kestachetDesc">
                             API de listes de courses partagées conçue en Architecture Hexagonale. Intègre un moteur de calcul de budget en temps réel avec jauges de seuil, une synchronisation par lots (Offline-First) idempotente et un enrichissement via Open Food Facts.
                         </p>
                         <div class="card-link">
-                            <a href="https://github.com/Erozah/kestachet" target="_blank" rel="noreferrer">Code source →</a>
+                            <a href="https://github.com/Erozah/kestachet" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
                         </div>
                     </div>
 
@@ -142,12 +147,12 @@
                             <span>CSS3</span>
                             <span>JavaScript</span>
                         </div>
-                        <h3>Portfolio personnel</h3>
-                        <p>
+                        <h3 data-i18n="projects.portfolioTitle">Portfolio personnel</h3>
+                        <p data-i18n="projects.portfolioDesc">
                             Site personnel développé en HTML5, CSS moderne (Grid/Flexbox) et JavaScript vanilla, sans dépendance externe ni framework lourd.
                         </p>
                         <div class="card-link">
-                            <a href="https://github.com/Erozah/Portfolio" target="_blank" rel="noreferrer">Code source →</a>
+                            <a href="https://github.com/Erozah/Portfolio" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
                         </div>
                     </div>
                 </div>
@@ -156,10 +161,10 @@
 
         <section class="section" id="competences">
             <div class="container">
-                <h2>Compétences</h2>
+                <h2 data-i18n="skills.title">Compétences</h2>
                 <div class="skills-grid">
                     <div class="skill-block">
-                        <h3>Back-end</h3>
+                        <h3 data-i18n="skills.backend">Back-end</h3>
                         <div class="skill-list">
                             <span>Java (17/21)</span>
                             <span>Spring Boot</span>
@@ -171,7 +176,7 @@
                     </div>
 
                     <div class="skill-block">
-                        <h3>Front-end</h3>
+                        <h3 data-i18n="skills.frontend">Front-end</h3>
                         <div class="skill-list">
                             <span>JavaScript (ES6+)</span>
                             <span>HTML5</span>
@@ -182,7 +187,7 @@
                     </div>
 
                     <div class="skill-block">
-                        <h3>Données & Systèmes</h3>
+                        <h3 data-i18n="skills.data">Données & Systèmes</h3>
                         <div class="skill-list">
                             <span>SQL / MySQL</span>
                             <span>PostgreSQL</span>
@@ -193,12 +198,12 @@
                     </div>
 
                     <div class="skill-block">
-                        <h3>Conception</h3>
+                        <h3 data-i18n="skills.design">Conception</h3>
                         <div class="skill-list">
-                            <span>POO & SOLID</span>
+                            <span data-i18n="skills.oop">POO & SOLID</span>
                             <span>Design Patterns</span>
-                            <span>Sécurité logicielle</span>
-                            <span>Tests unitaires</span>
+                            <span data-i18n="skills.security">Sécurité logicielle</span>
+                            <span data-i18n="skills.testing">Tests unitaires</span>
                         </div>
                     </div>
                 </div>
@@ -208,8 +213,8 @@
         <section class="section" id="contact">
             <div class="container">
                 <div class="contact-card">
-                    <h2>Contact</h2>
-                    <p>Pour échanger sur un projet ou une opportunité, vous pouvez me joindre sur mes réseaux :</p>
+                    <h2 data-i18n="contact.title">Contact</h2>
+                    <p data-i18n="contact.text">Pour échanger sur un projet ou une opportunité, vous pouvez me joindre sur mes réseaux :</p>
                     <div class="contact-links">
                         <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="btn btn-primary">GitHub (@Erozah)</a>
                     </div>
@@ -222,14 +227,15 @@
         <div class="container footer-content">
             <p>© 2026 Erozah</p>
             <div class="footer-links">
-                <a href="#projets">Projets</a>
-                <a href="#competences">Compétences</a>
-                <a href="#contact">Contact</a>
+                <a href="#projets" data-i18n="nav.projects">Projets</a>
+                <a href="#competences" data-i18n="nav.skills">Compétences</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
                 <a href="https://github.com/Erozah" target="_blank" rel="noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
