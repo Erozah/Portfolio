@@ -14,6 +14,7 @@ Conçu selon les standards du web moderne : HTML5 sémantique, CSS moderne (CSS 
 - **Wifi Signal Tracker** : Outil d'analyse du signal Wi-Fi en temps réel avec retour audio type compteur Geiger (Python, Web Audio API, Canvas).
 - **Donjons & Dragons** : Moteur de jeu de rôle et plateau au tour par tour en Java (POO, héritage, polymorphisme, JUnit 5).
 - **Square Games Platform** : API REST et interface web de jeux de plateau avec architecture par plugins, double persistance JPA/JDBC et sécurité JWT RSA.
+- **CartSync** : API REST de gestion de listes de courses partagées et moteur de budget en temps réel (Architecture Hexagonale, Offline-First, Spring Boot).
 - **Users Microservice** : Service Spring Boot de gestion et validation d'identités utilisateurs.
 
 ---

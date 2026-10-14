@@ -25,8 +25,8 @@ window.translations = {
             ddDesc: "Moteur de jeu tour par tour en Java. Application des concepts de la programmation orientée objet : polymorphisme pour les héros et les monstres, gestion des armes, des sorts et d'un inventaire dynamique.",
             squareGamesTitle: "Square Games - Plateforme de Jeux",
             squareGamesDesc: "Moteur extensible de jeux de plateau au tour par tour (Morpion, Puissance 4, Taquin). Architecture modulaire par plugins, double couche de persistance (JPA et Spring JDBC), sécurisation des flux par jetons JWT (RSA) et interface web interactive.",
-            kestachetTitle: "Kestachet - API REST & Moteur de Budget",
-            kestachetDesc: "API de listes de courses partagées conçue en Architecture Hexagonale. Intègre un moteur de calcul de budget en temps réel avec jauges de seuil, une synchronisation par lots (Offline-First) idempotente et un enrichissement via Open Food Facts.",
+            cartSyncTitle: "CartSync - API REST & Moteur de Budget",
+            cartSyncDesc: "API de listes de courses partagées conçue en Architecture Hexagonale. Intègre un moteur de calcul de budget en temps réel avec jauges de seuil, une synchronisation par lots (Offline-First) idempotente et un enrichissement via Open Food Facts.",
             portfolioTitle: "Portfolio personnel",
             portfolioDesc: "Site personnel développé en HTML5, CSS moderne (Grid/Flexbox) et JavaScript vanilla, sans dépendance externe ni framework lourd."
         },
@@ -71,8 +71,8 @@ window.translations = {
             ddDesc: "Turn-based board game engine in Java. Built on object-oriented programming principles: polymorphism for heroes and monsters, weapon and spell management, and dynamic inventory.",
             squareGamesTitle: "Square Games - Game Platform",
             squareGamesDesc: "Extensible turn-based board games engine (Tic-Tac-Toe, Connect Four, 15-Puzzle). Modular plugin architecture, dual JPA and Spring JDBC persistence, RSA JWT authentication, and interactive web UI.",
-            kestachetTitle: "Kestachet - REST API & Budget Engine",
-            kestachetDesc: "Shared grocery lists API built with Hexagonal Architecture. Features a real-time budget engine with threshold alerts, idempotent Offline-First batch synchronization, and Open Food Facts catalog integration.",
+            cartSyncTitle: "CartSync - REST API & Budget Engine",
+            cartSyncDesc: "Collaborative shopping lists API built with Hexagonal Architecture. Features a real-time budget calculation engine with threshold alerts, idempotent Offline-First batch synchronization, and Open Food Facts catalog integration.",
             portfolioTitle: "Personal Portfolio",
             portfolioDesc: "Personal portfolio built with HTML5, modern CSS (Grid/Flexbox), and vanilla JavaScript, with zero heavy external dependencies."
         },
