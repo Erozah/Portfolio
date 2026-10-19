@@ -37,7 +37,170 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Internationalization (i18n)
+    // ==============================================================================
+    // 🎵 SIMULATEUR AUDIO FFT (Pour Spicetify Visualizer)
+    // ==============================================================================
+    const audioCanvas = document.getElementById('spicetifyCanvas');
+    const toggleAudioBtn = document.getElementById('toggleAudioSim');
+    const audioStatus = document.getElementById('audioSimStatus');
+
+    if (audioCanvas && toggleAudioBtn) {
+        const ctx = audioCanvas.getContext('2d');
+        let isSimulating = false;
+        let animationFrameId = null;
+        let audioCtx = null;
+        let oscillator = null;
+        let gainNode = null;
+
+        // Ajuster la résolution interne du canvas
+        function resizeCanvas() {
+            const rect = audioCanvas.getBoundingClientRect();
+            audioCanvas.width = rect.width * window.devicePixelRatio;
+            audioCanvas.height = rect.height * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Dessiner l'état inactif (ondes d'attente)
+        function drawIdle() {
+            const width = audioCanvas.clientWidth;
+            const height = audioCanvas.clientHeight;
+            ctx.clearRect(0, 0, width, height);
+
+            ctx.strokeStyle = 'rgba(45, 212, 191, 0.25)';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(0, height / 2);
+            for (let x = 0; x < width; x += 4) {
+                const y = height / 2 + Math.sin(x * 0.04) * 3;
+                ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+        }
+        drawIdle();
+
+        let phase = 0;
+        function animateVisualizer() {
+            if (!isSimulating) return;
+
+            const width = audioCanvas.clientWidth;
+            const height = audioCanvas.clientHeight;
+            ctx.clearRect(0, 0, width, height);
+
+            phase += 0.08;
+            const barCount = 36;
+            const barWidth = (width / barCount) - 2;
+
+            for (let i = 0; i < barCount; i++) {
+                // Simulation fréquentielle réaliste avec harmoniques et battements
+                const freqAmp = Math.sin(phase + i * 0.3) * 0.4 + Math.cos(phase * 1.5 + i * 0.15) * 0.4 + 0.5;
+                const barHeight = Math.max(4, freqAmp * (height - 12));
+
+                const x = i * (barWidth + 2);
+                const y = height - barHeight;
+
+                // Dégradé cyan / émeraude
+                const gradient = ctx.createLinearGradient(0, height, 0, y);
+                gradient.addColorStop(0, '#0e3d4f');
+                gradient.addColorStop(0.5, '#2dd4bf');
+                gradient.addColorStop(1, '#38bdf8');
+
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.roundRect(x, y, barWidth, barHeight, [2, 2, 0, 0]);
+                ctx.fill();
+            }
+
+            animationFrameId = requestAnimationFrame(animateVisualizer);
+        }
+
+        toggleAudioBtn.addEventListener('click', () => {
+            isSimulating = !isSimulating;
+
+            if (isSimulating) {
+                toggleAudioBtn.innerHTML = '⏹️ Arrêter la démo';
+                toggleAudioBtn.style.background = '#2dd4bf';
+                toggleAudioBtn.style.color = '#071720';
+                if (audioStatus) audioStatus.textContent = 'En direct : 60 FPS (FFT 2048)';
+                animateVisualizer();
+
+                // Son subtil facultatif via Web Audio API
+                try {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    if (AudioContext) {
+                        audioCtx = new AudioContext();
+                        oscillator = audioCtx.createOscillator();
+                        gainNode = audioCtx.createGain();
+                        oscillator.type = 'sine';
+                        oscillator.frequency.setValueAtTime(220, audioCtx.currentTime);
+                        gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime); // volume très discret
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioCtx.destination);
+                        oscillator.start();
+                    }
+                } catch (e) {
+                    // Audio bloqué ou non supporté
+                }
+            } else {
+                toggleAudioBtn.innerHTML = '▶️ Lancer la démo FFT 60 FPS';
+                toggleAudioBtn.style.background = 'rgba(45, 212, 191, 0.15)';
+                toggleAudioBtn.style.color = '#2dd4bf';
+                if (audioStatus) audioStatus.textContent = 'Pause · Prêt à tester';
+                cancelAnimationFrame(animationFrameId);
+                drawIdle();
+
+                if (oscillator) {
+                    try { oscillator.stop(); } catch(e) {}
+                    oscillator = null;
+                }
+                if (audioCtx) {
+                    try { audioCtx.close(); } catch(e) {}
+                    audioCtx = null;
+                }
+            }
+        });
+    }
+
+    // ==============================================================================
+    // 📡 SIMULATEUR WIFI SIGNAL TRACKER
+    // ==============================================================================
+    const toggleWifiBtn = document.getElementById('toggleWifiSim');
+    const wifiGauge = document.getElementById('wifiGaugeFill');
+    const wifiDbm = document.getElementById('wifiDbmVal');
+
+    if (toggleWifiBtn && wifiGauge && wifiDbm) {
+        let isWifiSimulating = false;
+        let wifiInterval = null;
+
+        toggleWifiBtn.addEventListener('click', () => {
+            isWifiSimulating = !isWifiSimulating;
+
+            if (isWifiSimulating) {
+                toggleWifiBtn.innerHTML = '⏹️ Stopper le radar';
+                toggleWifiBtn.style.background = '#38bdf8';
+                toggleWifiBtn.style.color = '#071720';
+
+                wifiInterval = setInterval(() => {
+                    const dbm = Math.floor(Math.random() * 35) - 80; // entre -45 dBm et -80 dBm
+                    const percent = Math.min(100, Math.max(10, (dbm + 90) * 2));
+                    wifiGauge.style.width = percent + '%';
+                    wifiDbm.textContent = dbm + ' dBm';
+                }, 600);
+            } else {
+                toggleWifiBtn.innerHTML = '📶 Simuler le scan radar';
+                toggleWifiBtn.style.background = 'rgba(56, 189, 248, 0.15)';
+                toggleWifiBtn.style.color = '#38bdf8';
+                clearInterval(wifiInterval);
+                wifiGauge.style.width = '70%';
+                wifiDbm.textContent = '-52 dBm (Salon)';
+            }
+        });
+    }
+
+    // ==============================================================================
+    // 🌐 INTERNATIONALISATION (i18n)
+    // ==============================================================================
     function getNestedTranslation(obj, path) {
         return path.split('.').reduce((prev, curr) => (prev ? prev[curr] : null), obj);
     }
@@ -97,15 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedLang = localStorage.getItem('portfolio_lang');
         if (savedLang && window.translations && window.translations[savedLang]) {
             initialLang = savedLang;
-        } else {
-            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (browserLang.startsWith('en')) {
-                initialLang = 'en';
-            }
         }
-    } catch (e) {
-        initialLang = 'fr';
-    }
+    } catch (e) {}
 
     setLanguage(initialLang);
 });

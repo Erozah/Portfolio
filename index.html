@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erozah · Développeur</title>
+    <title>Erozah · Développeur Logiciel & Backend</title>
+    <meta name="description" content="Portfolio de Erozah - Développeur Logiciel & Backend (Java 21, Spring Boot, SQL, APIs REST, JavaScript). Solide double compétence finance & ingénierie logicielle.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">Erozah<span>.</span></a>
+            <a href="#" class="logo">
+                Erozah<span>.</span>
+                <span class="logo-tag">Backend · Java</span>
+            </a>
             
             <nav class="nav-links" id="navLinks">
                 <a href="#projets" data-i18n="nav.projects">Projets</a>
                 <a href="#competences" data-i18n="nav.skills">Compétences</a>
+                <a href="#valeur-metier" data-i18n="nav.bridge">Valeur Métier</a>
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
             </nav>
 
@@ -26,7 +32,7 @@
                     <span class="lang-divider">/</span>
                     <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
                 </div>
-                <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="github-link" aria-label="GitHub">
+                <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="social-nav-link" aria-label="GitHub">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                 </a>
                 <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -37,150 +43,353 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <div class="hero-pill" data-i18n="hero.pill">Développeur Logiciel & Web</div>
-                <h1 data-i18n="hero.title">Conception d'applications <span>Java</span> et d'interfaces web.</h1>
-                <p class="hero-text" data-i18n="hero.text">
-                    Passionné par le développement d'applications logicielles, la programmation orientée objet en Java et l'intégration web en JavaScript. Je cherche à concevoir des architectures simples, fiables et faciles à maintenir.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projets" class="btn btn-primary" data-i18n="hero.btnProjects">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Me contacter</a>
+                <div class="hero-layout">
+                    <div class="hero-main">
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            <span data-i18n="hero.status">🟢 Recherche Alternance (1 an · 12 mois) dès Janvier 2027</span>
+                        </div>
+
+                        <h1>
+                            <span class="gradient-text" data-i18n="hero.title">Développeur Logiciel & Backend</span>
+                        </h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">
+                            Double compétence : 10 ans d'expertise financière au service de l'ingénierie logicielle.
+                        </p>
+                        <p class="hero-text" data-i18n="hero.text">
+                            Issu d'un solide parcours en <strong>gestion financière d'entreprise</strong> et formé à la sélection intensive de <strong>l'École 42 Lausanne</strong> ainsi qu'au <strong>Campus Numérique</strong>, je conçois des architectures logicielles fiables (Java 21, Spring Boot, APIs REST, SQL, JavaScript) avec une rigueur analytique sans concession.
+                        </p>
+
+                        <!-- Stats Strip -->
+                        <div class="stats-strip">
+                            <div class="stat-box">
+                                <div class="stat-num" data-i18n="hero.s1_num">10 ans</div>
+                                <div class="stat-label" data-i18n="hero.s1_lbl">Expérience Métier & Rigueur</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" data-i18n="hero.s2_num">Java 21 / Spring</div>
+                                <div class="stat-label" data-i18n="hero.s2_lbl">Architecture Hexagonale & BDD</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" data-i18n="hero.s3_num">42 Lausanne</div>
+                                <div class="stat-label" data-i18n="hero.s3_lbl">Piscine C & Algorithmique</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" data-i18n="hero.s4_num">1 an (12 mois)</div>
+                                <div class="stat-label" data-i18n="hero.s4_lbl">Contrat d'alternance visé</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="hero-buttons">
+                            <a href="#projets" class="btn btn-primary" data-i18n="hero.btnProjects">🚀 Voir mes projets</a>
+                            <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">✉️ Me contacter</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-code-card">
+                        <div class="code-card-header">
+                            <span class="terminal-dot dot-red"></span>
+                            <span class="terminal-dot dot-yellow"></span>
+                            <span class="terminal-dot dot-green"></span>
+                            <span class="code-card-title">erozah@backend:~$</span>
+                        </div>
+                        <div class="code-card-body">
+                            <div class="code-line"><span class="c-prompt">➜</span> <span class="c-cmd">whoami</span></div>
+                            <div class="code-line c-cyan">Erozah (Software & Backend Dev)</div>
+                            <div class="code-line"><span class="c-prompt">➜</span> <span class="c-cmd">cat</span> stack.json</div>
+                            <div class="code-line c-dim">{ "java": 21, "spring": 3, "db": ["PostgreSQL", "SQL"], "clean_code": true }</div>
+                            <div class="code-line"><span class="c-prompt">➜</span> <span class="c-cmd">status</span> --target</div>
+                            <div class="code-line c-accent">● Alternance 12 mois (Janvier 2027)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section class="section" id="projets">
             <div class="container">
                 <div class="section-top">
-                    <h2 data-i18n="projects.title">Projets</h2>
+                    <div class="section-title-wrap">
+                        <h2 data-i18n="projects.title">Projets & Réalisations</h2>
+                        <p data-i18n="projects.subtitle">Conceptions logicielles complètes, architectures modulaires et démonstrations interactives</p>
+                    </div>
                     <div class="filters">
                         <button class="filter-btn active" data-filter="all" data-i18n="projects.filterAll">Tous</button>
-                        <button class="filter-btn" data-filter="java" data-i18n="projects.filterJava">Java</button>
-                        <button class="filter-btn" data-filter="web" data-i18n="projects.filterWeb">Web</button>
+                        <button class="filter-btn" data-filter="java" data-i18n="projects.filterJava">Java / Spring</button>
+                        <button class="filter-btn" data-filter="web" data-i18n="projects.filterWeb">Web & JS</button>
                     </div>
                 </div>
 
                 <div class="projects-grid">
+                    <!-- Project 1 : Spicetify Visualizer (Featured avec démo interactive) -->
                     <div class="project-card featured" data-category="web">
-                        <div class="card-tags">
-                            <span>Canvas 2D</span>
-                            <span>Web Audio API</span>
-                            <span>JavaScript</span>
-                            <span>Spicetify</span>
+                        <div class="card-header-top">
+                            <span class="card-category">Audio & Moteur Graphique</span>
+                            <span class="card-badge">Canvas 2D · 60 FPS</span>
                         </div>
-                        <h3>Spicetify Visualizer Engine</h3>
-                        <p data-i18n="projects.spicetifyDesc">
-                            Moteur de visualisation audio 60 FPS pour Spotify (via Spicetify). Conception architecturée selon les principes SOLID pour supporter des "Mod Packs" dynamiques (Cyber Cat, Cosmic Cat, Red Panda). Intègre une analyse fréquentielle en temps réel (FFT), un moteur de physique cinématique de Verlet et des environnements procéduraux réactifs.
-                        </p>
-                        <div class="card-link">
-                            <a href="https://github.com/Erozah/spicetify-visualizer" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
+                        <h3 data-i18n="projects.spicetifyTitle">Spicetify Visualizer Engine</h3>
+                        
+                        <div class="card-tags">
+                            <span>JavaScript ES6+</span>
+                            <span>Web Audio API</span>
+                            <span>Canvas 2D</span>
+                            <span>Verlet Physics</span>
+                            <span>Principes SOLID</span>
+                        </div>
+
+                        <!-- Simulateur Canvas FFT Interactif -->
+                        <div class="interactive-simulator">
+                            <div class="sim-header">
+                                <span data-i18n="projects.simTitle">Simulateur Canvas FFT (60 FPS)</span>
+                                <span class="sim-status" id="audioSimStatus" data-i18n="projects.simReady">Prêt à tester</span>
+                            </div>
+                            <canvas id="spicetifyCanvas" class="sim-canvas"></canvas>
+                            <div class="sim-controls">
+                                <button type="button" class="sim-btn" id="toggleAudioSim" data-i18n="projects.simBtn">
+                                    ▶️ Lancer la simulation audio FFT
+                                </button>
+                                <span class="sim-status">Temps réel · 60 FPS</span>
+                            </div>
+                        </div>
+
+                        <div class="case-study-highlights">
+                            <div class="highlight-row">
+                                <span class="highlight-label">🎯 Défi :</span>
+                                <span data-i18n="projects.spicetifyGoal">Moteur de visualisation audio 60 FPS pour Spotify avec physique de Verlet et analyse FFT temps réel.</span>
+                            </div>
+                            <div class="highlight-row">
+                                <span class="highlight-label">⚙️ Architecture :</span>
+                                <span data-i18n="projects.spicetifyArch">Principes SOLID, injection de Mod Packs procéduraux (Cyber Cat, Cosmic Cat, Red Panda) et Canvas 2D haute fréquence.</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="https://github.com/Erozah/spicetify-visualizer" target="_blank" rel="noreferrer" class="action-link" data-i18n="projects.sourceCode">
+                                Code source GitHub →
+                            </a>
                         </div>
                     </div>
 
+                    <!-- Project 2 : CartSync (Java / Spring / Hexagonale) -->
+                    <div class="project-card" data-category="java">
+                        <div class="card-header-top">
+                            <span class="card-category">Backend & Data</span>
+                            <span class="card-badge">Clean Architecture</span>
+                        </div>
+                        <h3 data-i18n="projects.cartSyncTitle">CartSync - API REST & Moteur de Budget</h3>
+                        
+                        <div class="card-tags">
+                            <span>Java 21</span>
+                            <span>Spring Boot 3</span>
+                            <span>Architecture Hexagonale</span>
+                            <span>PostgreSQL</span>
+                            <span>Open Food Facts</span>
+                        </div>
+
+                        <div class="case-study-highlights">
+                            <div class="highlight-row">
+                                <span class="highlight-label">🎯 Défi :</span>
+                                <span data-i18n="projects.cartSyncGoal">API de listes collaboratives avec calcul de budget en temps réel et seuils d'alerte financiers.</span>
+                            </div>
+                            <div class="highlight-row">
+                                <span class="highlight-label">⚙️ Architecture :</span>
+                                <span data-i18n="projects.cartSyncArch">Architecture Hexagonale (Clean Architecture), synchronisation par lots (Offline-First) idempotente et enrichissement via API externe.</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="https://github.com/Erozah/CartSync" target="_blank" rel="noreferrer" class="action-link" data-i18n="projects.sourceCode">
+                                Code source GitHub →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 : Square Games (Java / Spring / JWT) -->
+                    <div class="project-card" data-category="java">
+                        <div class="card-header-top">
+                            <span class="card-category">Système Modulaire</span>
+                            <span class="card-badge">Sécurité JWT RSA</span>
+                        </div>
+                        <h3 data-i18n="projects.squareGamesTitle">Square Games - Moteur de Jeux Extensible</h3>
+                        
+                        <div class="card-tags">
+                            <span>Java 21</span>
+                            <span>Spring Boot</span>
+                            <span>Spring Data JPA / JDBC</span>
+                            <span>Design Patterns</span>
+                            <span>JWT RSA</span>
+                        </div>
+
+                        <div class="case-study-highlights">
+                            <div class="highlight-row">
+                                <span class="highlight-label">🎯 Défi :</span>
+                                <span data-i18n="projects.squareGamesGoal">Plateforme modulaire de jeux de plateau au tour par tour (Morpion, Puissance 4, Taquin).</span>
+                            </div>
+                            <div class="highlight-row">
+                                <span class="highlight-label">⚙️ Architecture :</span>
+                                <span data-i18n="projects.squareGamesArch">Design pattern Plugin/Factory, double DAO (Spring JDBC et JPA), sécurisation par jetons JWT asymétriques (RSA).</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="https://github.com/Erozah/square_games" target="_blank" rel="noreferrer" class="action-link" data-i18n="projects.sourceCode">
+                                Code source GitHub →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 : Wifi Signal Tracker (Web & System) -->
                     <div class="project-card" data-category="web">
+                        <div class="card-header-top">
+                            <span class="card-category">Réseaux & Signal</span>
+                            <span class="card-badge">Geiger Sound Synthesis</span>
+                        </div>
+                        <h3 data-i18n="projects.wifiTitle">Wifi Signal Tracker</h3>
+                        
                         <div class="card-tags">
                             <span>JavaScript</span>
                             <span>Web Audio API</span>
                             <span>Python</span>
-                            <span>Linux</span>
+                            <span>Linux CLI</span>
                         </div>
-                        <h3>Wifi Signal Tracker</h3>
-                        <p data-i18n="projects.wifiDesc">
-                            Application en temps réel pour analyser la puissance du signal Wi-Fi dans différentes pièces. Comprend une jauge visuelle dynamique, un retour audio façon compteur Geiger via l'API Web Audio et une interface adaptée mobile.
-                        </p>
-                        <div class="card-link">
-                            <a href="https://github.com/Erozah/Wifi_signal_tracker" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
+
+                        <!-- Mini Radar Gauge Simulator -->
+                        <div class="interactive-simulator" style="padding: 0.8rem 1rem;">
+                            <div class="sim-header" style="margin-bottom: 0.4rem;">
+                                <span>Radar dBm en direct</span>
+                                <span id="wifiDbmVal" style="color: #38bdf8; font-weight: 700;">-52 dBm (Salon)</span>
+                            </div>
+                            <div style="background: #030c12; height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 0.6rem;">
+                                <div id="wifiGaugeFill" style="background: linear-gradient(to right, #0e3d4f, #38bdf8); width: 70%; height: 100%; transition: width 0.3s ease;"></div>
+                            </div>
+                            <button type="button" class="sim-btn" id="toggleWifiSim" style="color: #38bdf8; border-color: #38bdf8;" data-i18n="projects.wifiSimBtn">
+                                📶 Simuler le scan radar Wi-Fi
+                            </button>
+                        </div>
+
+                        <div class="case-study-highlights">
+                            <div class="highlight-row">
+                                <span class="highlight-label">🎯 Défi :</span>
+                                <span data-i18n="projects.wifiGoal">Outil de diagnostic et de cartographie de couverture Wi-Fi avec feedback sonore type compteur Geiger.</span>
+                            </div>
+                            <div class="highlight-row">
+                                <span class="highlight-label">⚙️ Architecture :</span>
+                                <span data-i18n="projects.wifiArch">Web Audio API pour les synthèses sonores de fréquence, parsing système Linux en Python et interface responsive.</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="https://github.com/Erozah/Wifi_signal_tracker" target="_blank" rel="noreferrer" class="action-link" data-i18n="projects.sourceCode">
+                                Code source GitHub →
+                            </a>
                         </div>
                     </div>
 
+                    <!-- Project 5 : D&D Engine (Java POO) -->
                     <div class="project-card" data-category="java">
+                        <div class="card-header-top">
+                            <span class="card-category">Programmation Objet</span>
+                            <span class="card-badge">Polymorphisme & SOLID</span>
+                        </div>
+                        <h3 data-i18n="projects.ddTitle">Moteur de Jeu Donjons & Dragons</h3>
+                        
                         <div class="card-tags">
                             <span>Java</span>
-                            <span>POO</span>
-                            <span>CLI</span>
+                            <span>POO Avancée</span>
+                            <span>Pattern Strategy</span>
+                            <span>Algorithmique</span>
                         </div>
-                        <h3 data-i18n="projects.ddTitle">Jeu de plateau Donjons & Dragons</h3>
-                        <p data-i18n="projects.ddDesc">
-                            Moteur de jeu tour par tour en Java. Application des concepts de la programmation orientée objet : polymorphisme pour les héros et les monstres, gestion des armes, des sorts et d'un inventaire dynamique.
-                        </p>
-                        <div class="card-link">
-                            <a href="https://github.com/Erozah/D-D" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
-                        </div>
-                    </div>
 
-                    <div class="project-card" data-category="java">
-                        <div class="card-tags">
-                            <span>Java 21</span>
-                            <span>Spring Boot</span>
-                            <span>JPA / JDBC</span>
-                            <span>JWT</span>
+                        <div class="case-study-highlights">
+                            <div class="highlight-row">
+                                <span class="highlight-label">🎯 Défi :</span>
+                                <span data-i18n="projects.ddGoal">Jeu de plateau au tour par tour axé sur la programmation orientée objet avancée en Java pur.</span>
+                            </div>
+                            <div class="highlight-row">
+                                <span class="highlight-label">⚙️ Architecture :</span>
+                                <span data-i18n="projects.ddArch">Polymorphisme héros/monstres, pattern Strategy pour les combats et gestion d'un inventaire dynamique.</span>
+                            </div>
                         </div>
-                        <h3 data-i18n="projects.squareGamesTitle">Square Games - Plateforme de Jeux</h3>
-                        <p data-i18n="projects.squareGamesDesc">
-                            Moteur extensible de jeux de plateau au tour par tour (Morpion, Puissance 4, Taquin). Architecture modulaire par plugins, double couche de persistance (JPA et Spring JDBC), sécurisation des flux par jetons JWT (RSA) et interface web interactive.
-                        </p>
-                        <div class="card-link">
-                            <a href="https://github.com/Erozah/square_games" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
-                        </div>
-                    </div>
 
-                    <div class="project-card" data-category="java">
-                        <div class="card-tags">
-                            <span>Spring Boot</span>
-                            <span>REST API</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <h3 data-i18n="projects.cartSyncTitle">CartSync - API REST & Moteur de Budget</h3>
-                        <p data-i18n="projects.cartSyncDesc">
-                            API de listes de courses partagées conçue en Architecture Hexagonale. Intègre un moteur de calcul de budget en temps réel avec jauges de seuil, une synchronisation par lots (Offline-First) idempotente et un enrichissement via Open Food Facts.
-                        </p>
-                        <div class="card-link">
-                            <a href="https://github.com/Erozah/CartSync" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="web">
-                        <div class="card-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <h3 data-i18n="projects.portfolioTitle">Portfolio personnel</h3>
-                        <p data-i18n="projects.portfolioDesc">
-                            Site personnel développé en HTML5, CSS moderne (Grid/Flexbox) et JavaScript vanilla, sans dépendance externe ni framework lourd.
-                        </p>
-                        <div class="card-link">
-                            <a href="https://github.com/Erozah/Portfolio" target="_blank" rel="noreferrer" data-i18n="projects.sourceCode">Code source →</a>
+                        <div class="card-actions">
+                            <a href="https://github.com/Erozah/D-D" target="_blank" rel="noreferrer" class="action-link" data-i18n="projects.sourceCode">
+                                Code source GitHub →
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section "Le Pont Métier & Code" -->
+        <section class="section" id="valeur-metier">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 data-i18n="bridge.title">La Double Casquette : Métier & Code</h2>
+                    <p data-i18n="bridge.subtitle">Pourquoi 10 ans de finance d'entreprise changent la donne sur vos projets logiciels</p>
+                </div>
+
+                <div class="bridge-grid">
+                    <div class="bridge-card">
+                        <div class="bridge-icon">⚡</div>
+                        <h3 data-i18n="bridge.c1_title">Zéro délai d'apprentissage métier</h3>
+                        <p data-i18n="bridge.c1_desc">
+                            Compréhension immédiate des règles de gestion complexes (TVA, paie, flux ERP, facturation, conformité). Je traduis vos besoins sans intermédiaire.
+                        </p>
+                    </div>
+
+                    <div class="bridge-card">
+                        <div class="bridge-icon">🎯</div>
+                        <h3 data-i18n="bridge.c2_title">Culture du zéro défaut</h3>
+                        <p data-i18n="bridge.c2_desc">
+                            L'exigence d'exactitude de l'audit financier transposée au code : typage rigoureux, tests unitaires exhaustifs et intégrité relationnelle SQL.
+                        </p>
+                    </div>
+
+                    <div class="bridge-card">
+                        <div class="bridge-icon">🤝</div>
+                        <h3 data-i18n="bridge.c3_title">Communication & Méthode Agile</h3>
+                        <p data-i18n="bridge.c3_desc">
+                            Aisance reconnue pour animer le dialogue entre équipes techniques et directions métiers, avec des rituels Scrum/Kanban transparents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
         <section class="section" id="competences">
             <div class="container">
-                <h2 data-i18n="skills.title">Compétences</h2>
+                <div class="section-title-wrap">
+                    <h2 data-i18n="skills.title">Compétences Techniques</h2>
+                </div>
                 <div class="skills-grid">
                     <div class="skill-block">
-                        <h3 data-i18n="skills.backend">Back-end</h3>
+                        <h3 data-i18n="skills.backend">Backend & Architecture</h3>
                         <div class="skill-list">
-                            <span>Java (17/21)</span>
-                            <span>Spring Boot</span>
+                            <span>Java 21</span>
+                            <span>Spring Boot 3</span>
                             <span>Spring Data JPA</span>
-                            <span>API REST</span>
-                            <span>JUnit 5</span>
+                            <span>Architecture Hexagonale</span>
+                            <span>APIs REST</span>
                             <span>Maven</span>
                         </div>
                     </div>
 
                     <div class="skill-block">
-                        <h3 data-i18n="skills.frontend">Front-end</h3>
+                        <h3 data-i18n="skills.frontend">Frontend & Web APIs</h3>
                         <div class="skill-list">
                             <span>JavaScript (ES6+)</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
+                            <span>HTML5 / CSS3</span>
+                            <span>Canvas 2D</span>
                             <span>Web Audio API</span>
                             <span>Responsive UI</span>
                         </div>
@@ -191,44 +400,49 @@
                         <div class="skill-list">
                             <span>SQL / MySQL</span>
                             <span>PostgreSQL</span>
-                            <span>Git / GitHub</span>
-                            <span>Linux (Debian / Ubuntu)</span>
+                            <span>Git & GitHub</span>
+                            <span>Linux (Debian/Ubuntu)</span>
                             <span>Bash</span>
+                            <span>Docker (notions)</span>
                         </div>
                     </div>
 
                     <div class="skill-block">
-                        <h3 data-i18n="skills.design">Conception</h3>
+                        <h3 data-i18n="skills.design">Méthodes & Conception</h3>
                         <div class="skill-list">
                             <span data-i18n="skills.oop">POO & SOLID</span>
                             <span>Design Patterns</span>
-                            <span data-i18n="skills.security">Sécurité logicielle</span>
-                            <span data-i18n="skills.testing">Tests unitaires</span>
+                            <span data-i18n="skills.testing">JUnit 5</span>
+                            <span data-i18n="skills.security">Sécurité & JWT</span>
+                            <span>Méthodes Agiles (Scrum)</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section class="section" id="contact">
             <div class="container">
                 <div class="contact-card">
-                    <h2 data-i18n="contact.title">Contact</h2>
-                    <p data-i18n="contact.text">Pour échanger sur un projet ou une opportunité, vous pouvez me joindre sur mes réseaux :</p>
+                    <h2 data-i18n="contact.title">Contact & Échanges</h2>
+                    <p data-i18n="contact.text">Disponible pour échanger sur vos projets ou pour une opportunité d'alternance duale (12 mois) dès janvier 2027.</p>
                     <div class="contact-links">
-                        <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="btn btn-primary">GitHub (@Erozah)</a>
+                        <a href="https://github.com/Erozah" target="_blank" rel="noreferrer" class="btn btn-primary">💻 GitHub (@Erozah)</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container footer-content">
-            <p>© 2026 Erozah</p>
+            <p>© 2026 Erozah · Développeur Logiciel & Backend</p>
             <div class="footer-links">
                 <a href="#projets" data-i18n="nav.projects">Projets</a>
                 <a href="#competences" data-i18n="nav.skills">Compétences</a>
+                <a href="#valeur-metier" data-i18n="nav.bridge">Valeur Métier</a>
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
                 <a href="https://github.com/Erozah" target="_blank" rel="noreferrer">GitHub</a>
             </div>
